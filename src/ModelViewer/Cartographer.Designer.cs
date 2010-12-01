@@ -119,6 +119,9 @@
             this.pictureMap.Size = new System.Drawing.Size(179, 161);
             this.pictureMap.TabIndex = 0;
             this.pictureMap.TabStop = false;
+            this.pictureMap.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureMap_MouseDown);
+            this.pictureMap.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureMap_MouseMove);
+            this.pictureMap.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureMap_MouseUp);
             // 
             // Cartographer
             // 

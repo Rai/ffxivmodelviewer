@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using SlimDX;
 using DatDigger;
+using System.Drawing.Drawing2D;
 
 namespace ModelViewer
 {
@@ -18,6 +19,10 @@ namespace ModelViewer
         private const int mapSheetFileId = 0x01030360; // /01/03/03/60.DAT
         private static DataTable mapDataTable;
         private static List<MapData> mapData;
+        private bool isMouseDown = false;
+        private bool isPanning = false;
+        private Point _startMousePosition;
+
 
         static Cartographer() {
             var relativeFilePath = DatDigger.Utilities.DataFileIdToRelativePath(mapSheetFileId);
@@ -205,6 +210,47 @@ namespace ModelViewer
                         currentImage.Save(str, System.Drawing.Imaging.ImageFormat.Png);
                     }
                 }
+            }
+        }
+
+        private void pictureMap_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                if (!isPanning)
+                {
+                    _startMousePosition = e.Location;
+                    isPanning = true;
+                }
+
+                if (isPanning)
+                {
+                    int x;
+                    int y;
+                    Point pos;
+                    x = -panel1.AutoScrollPosition.X + (_startMousePosition.X - e.Location.X);
+                    y = -panel1.AutoScrollPosition.Y + (_startMousePosition.Y - e.Location.Y);
+                    pos = new Point(x, y);
+                    panel1.AutoScrollPosition = pos;
+                }  
+            }
+        }
+
+        private void pictureMap_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = true;
+            }
+        }
+
+        private void pictureMap_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = false;
+                if (isPanning)
+                    isPanning = false;
             }
         }
     }
