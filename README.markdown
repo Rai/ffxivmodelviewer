@@ -64,8 +64,8 @@ Allows you to view and save images of the maps used in game
 
 ### Version History
 
-__v1.0.0__ - Initial Release
-
+__v1.0.0__ - Initial Release.
+__v1.0.1__ - Added Mouse Panning to Cartographer.
 ### License
 
 FFXIV Model Viewer is licensed under the MIT license, the text of which is located within the LICENSE file that should be included with this source distribution.
