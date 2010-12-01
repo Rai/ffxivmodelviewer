@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using DatDigger;
+using System.Diagnostics;
 
 namespace ModelViewer
 {
@@ -163,10 +164,18 @@ namespace ModelViewer
         {
             string animDir = Path.Combine(modelData.ModelPath, "act/");
             bool hasAnim = Directory.Exists(animDir);
-            string skeletonFile = Path.Combine(modelData.ModelPath, "skl/0001");
-            string subModelDir = Path.Combine(modelData.ModelPath, "equ/");
+            string skeletonFile;
+            string subModelDir;
+            var subModels = new String[0];
+            try
+            {
+                skeletonFile = Path.Combine(modelData.ModelPath, "skl/0001");
+                subModelDir = Path.Combine(modelData.ModelPath, "equ/");
+                subModels = Directory.GetDirectories(subModelDir, "e???", SearchOption.TopDirectoryOnly);
+            }
+            catch (System.IO.DirectoryNotFoundException ex) { Trace.TraceWarning(ex.Message); return false; }
 
-            var subModels = Directory.GetDirectories(subModelDir, "e???", SearchOption.TopDirectoryOnly);
+            
             foreach (string subModel in subModels)
             {
                 string dirName = Path.GetFileName(subModel);

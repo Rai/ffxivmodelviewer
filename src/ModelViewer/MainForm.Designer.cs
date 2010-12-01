@@ -488,6 +488,7 @@
             this.debugText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.debugText.Size = new System.Drawing.Size(585, 171);
             this.debugText.TabIndex = 0;
+            this.debugText.TextChanged += new System.EventHandler(this.debugText_TextChanged);
             // 
             // rootContainer
             // 

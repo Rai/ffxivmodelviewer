@@ -674,5 +674,14 @@ namespace ModelViewer
             });
             thread.Start(modelData);
         }
+
+        private void debugText_TextChanged(object sender, EventArgs e)
+        {
+            debugText.Text += "";
+
+            debugText.Select(debugText.Text.Length, 0);
+
+            debugText.ScrollToCaret();
+        }
     }
 }
