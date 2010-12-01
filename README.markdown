@@ -65,6 +65,7 @@ Allows you to view and save images of the maps used in game
 ### Version History
 
 __v1.0.0__ - Initial Release.
+
 __v1.0.1__ - Added Mouse Panning to Cartographer.
 ### License
 
