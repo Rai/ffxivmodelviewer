@@ -579,6 +579,7 @@
             // 
             this.scriptViewer_btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.scriptViewer_btn.Enabled = false;
+            this.scriptViewer_btn.Image = ((System.Drawing.Image)(resources.GetObject("scriptViewer_btn.Image")));
             this.scriptViewer_btn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.scriptViewer_btn.Name = "scriptViewer_btn";
             this.scriptViewer_btn.Size = new System.Drawing.Size(23, 22);

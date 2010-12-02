@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>265, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>132, 17</value>
+  </data>
+  <data name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>265, 17</value>
+  </data>
   <data name="openToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -292,12 +292,12 @@
         qtcQ5w7ShvVT5T5K1QjJF7PUgYxs9de/4Y4Eqq0KD8QAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="searchToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="searchToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>500, 17</value>
-  </metadata>
-  <metadata name="charaToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="charaToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>370, 17</value>
-  </metadata>
+  </data>
   <data name="btnHideChara.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -334,9 +334,10 @@
         tu0vwzCuq9XqJXu/QYMHBiwL5w+f+J828As8DMFpHZP1cAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>46</value>
-  </metadata>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAIAICAAAAEAIACoEAAAJgAAABAQAAABACAAaAQAAM4QAAAoAAAAIAAAAEAAAAABACAAAAAAAAAQ
@@ -430,6 +431,16 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASEhXAgAAAAAAAAAAUlBYAUNCUAFAQmkBAAAAAFJS
         XAJGQ0wBAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAv/8AAK//AADf/QAAjv0AAI79AACmeQAAN3kAALBT
         AACQBwAAyA8AAOADAADgHwAA8j8AAO9/AAD//wAA
+</value>
+  </data>
+  <data name="scriptViewer_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhEAAQAPUAAJu814yz2aOjo2ag2cbGxqqqqtbW1oaGhn9/f6ampqGhoZWVlT6CuZe3y6mpqcjI
+        yJKSknh4eJqamqKiooCAgJ2dnXR0dJmZmX5+fo+Pj3x8fFSRuXNzc4WFhXd3d9PT06WlpcnJyYuLi5+f
+        n9LS0piYmJubm4Gt2T13udvb2+r0/77a9f///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAC0ALAAAAAAQABAAAAaAQJZwSBy2jqwNg4FqOpus
+        Y4sFUFmv11MUCVh5v9/AdtpQDbDZMasBbmulVDPa+ua2wfVpQG51OBIgAhNbLAFgBSwpBh8hBBVRVAEn
+        BYgJCgomFxIEC0UpnykHQhSgagKnJRAiHQgaCB5qQiOJBiQPBBxjUlMLGQcYERa6u1NFUkEAOw==
 </value>
   </data>
 </root>
