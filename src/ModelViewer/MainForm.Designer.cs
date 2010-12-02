@@ -75,6 +75,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnRenderChara = new System.Windows.Forms.ToolStripButton();
             this.btnCharaAnimation = new System.Windows.Forms.ToolStripButton();
+            this.scriptViewer_btn = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -517,6 +518,7 @@
             this.charaSelector.Size = new System.Drawing.Size(158, 637);
             this.charaSelector.TabIndex = 0;
             this.charaSelector.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.charaSelector_AfterSelect);
+            this.charaSelector.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.charaSelector_MouseDoubleClick);
             // 
             // charaToolStrip
             // 
@@ -525,7 +527,8 @@
             this.btnHideChara,
             this.toolStripSeparator1,
             this.btnRenderChara,
-            this.btnCharaAnimation});
+            this.btnCharaAnimation,
+            this.scriptViewer_btn});
             this.charaToolStrip.Location = new System.Drawing.Point(0, 0);
             this.charaToolStrip.Name = "charaToolStrip";
             this.charaToolStrip.Padding = new System.Windows.Forms.Padding(0);
@@ -571,6 +574,16 @@
             this.btnCharaAnimation.Size = new System.Drawing.Size(23, 22);
             this.btnCharaAnimation.Text = "View Animated (EXPERIMENTAL)";
             this.btnCharaAnimation.Click += new System.EventHandler(this.btnCharaAnimation_Click);
+            // 
+            // scriptViewer_btn
+            // 
+            this.scriptViewer_btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.scriptViewer_btn.Enabled = false;
+            this.scriptViewer_btn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.scriptViewer_btn.Name = "scriptViewer_btn";
+            this.scriptViewer_btn.Size = new System.Drawing.Size(23, 22);
+            this.scriptViewer_btn.Text = "View Script";
+            this.scriptViewer_btn.Click += new System.EventHandler(this.scriptViewer_btn_Click);
             // 
             // MainForm
             // 
@@ -662,6 +675,7 @@
         private System.Windows.Forms.ToolStripButton btnAnimatedSkeleton;
         private System.Windows.Forms.ToolStripButton btnCharaAnimation;
         private System.Windows.Forms.ToolStripMenuItem cartographerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton scriptViewer_btn;
     }
 }
 

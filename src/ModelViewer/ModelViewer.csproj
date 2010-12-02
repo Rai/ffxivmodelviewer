@@ -101,6 +101,12 @@
     </Compile>
     <Compile Include="CharaHelper.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="ScriptViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScriptViewer.Designer.cs">
+      <DependentUpon>ScriptViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     <EmbeddedResource Include="Cartographer.resx">
       <DependentUpon>Cartographer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScriptViewer.resx">
+      <DependentUpon>ScriptViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +199,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ShaderViewer.resx">
       <DependentUpon>ShaderViewer.cs</DependentUpon>

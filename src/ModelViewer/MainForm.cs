@@ -423,8 +423,29 @@ namespace ModelViewer
             OpenPreferenceWindow();
         }
 
+        private void scriptViewer_btn_Click(object sender, EventArgs e)
+        {
+            DatDigger.Sections.Script.LuaFile lf = new DatDigger.Sections.Script.LuaFile();
+            lf.LoadFile(new BinaryReaderEx(File.OpenRead((string)charaSelector.SelectedNode.Tag)));
+            if (lf == null)
+            {
+                Trace.TraceInformation("Not a valid LUA file.");
+                return;
+            }
+
+            ScriptViewer sv = new ScriptViewer(lf);
+            sv.Show();
+        }
+
         private void charaSelector_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            // For scripts
+            scriptViewer_btn.Enabled = false;
+            if (e.Node.Text.EndsWith(".lpb") || e.Node.Text.EndsWith(".san"))
+            {
+                scriptViewer_btn.Enabled = true;
+            }
+
             CharaModelData modelData = (e.Node.Tag as CharaModelData);
             if (modelData == null) { return; }
 
@@ -682,6 +703,19 @@ namespace ModelViewer
             debugText.Select(debugText.Text.Length, 0);
 
             debugText.ScrollToCaret();
+        }
+
+        private void charaSelector_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (charaSelector.SelectedNode.Text.EndsWith("lpb"))
+            {
+                DatDigger.Sections.Script.LuaFile lf = new DatDigger.Sections.Script.LuaFile();
+                lf.LoadFile(new BinaryReaderEx(File.OpenRead((string)charaSelector.SelectedNode.Tag)));
+                BinaryWriter bw = new BinaryWriter(File.Create(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + charaSelector.SelectedNode.Text + ".lua"));
+                bw.Write(lf.Data);
+                bw.Flush();
+                bw.Close();
+            }
         }
     }
 }
